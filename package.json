@@ -1,0 +1,18 @@
+{
+  "name": "devsbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Você pode clonar este repositório OU baixar o .zip",
+  "main": "public/index.php",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "imask": "^6.0.3"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.0",
+    "prettier": "^2.0.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "author": "Renan Cunha"
+}

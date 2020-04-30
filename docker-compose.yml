@@ -3,13 +3,16 @@ networks:
   web:
   db:
 services:
+  # Servidor Web NGINX
   nginx:
     image: nginx:1.17.10
-    container_name: nginx
+    container_name: nginx-devsbook
     ports:
       - 80:80
     volumes:
+      # Mapeamento do diretório da aplicação
       - ./:/usr/share/nginx/html
+      # Mapeamento do arquivo de configuração do servidor
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     links:
       - php
@@ -17,18 +20,20 @@ services:
       - web
   php:
     image: php:7.4-fpm
-    container_name: php-fpm
+    container_name: php-fpm-devsbook
     ports:
       - 9000:9000
     volumes:
+      # Mapeamento do diretório da aplicação
       - ./:/usr/share/nginx/html
     networks:
       - web
       - db
   mysql:
     image: mysql:8.0.20
-    container_name: mysql
+    container_name: mysql-devsbook
     volumes:
+      # Mapeamento do diretório do mysql
       - ./mysql:/var/lib/mysql
     ports:
       - 3306:3306
@@ -38,6 +43,6 @@ services:
       - db
 
 # - Post Install:
-# - - Run:
+# - - Instalar os drivers de conexão do mysql executando:
 # docker-compose exec php docker-php-ext-install pdo pdo_mysql
 # docker-compose php restart

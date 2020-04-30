@@ -20,9 +20,9 @@ de pacote instalados.
 - Copie o arquivo **.env.example** e cole como **.env** e então insira todas
 as credenciais e configurações necessárias.
 
-- Dê permissão de escrita para o arquivos dentro da pasta **logs** (caso não
-exista, crie-a) para que os logs possam ser registrados.
-> chmod -R 777 logs/*
+- Dê permissão de escrita para a pasta **logs** (caso não exista, crie-a) para
+que os logs possam ser registrados.
+> chmod -R 777 logs
 
 - Se estiver utilizando o docker-compose, execute:
 > docker container inspect mysql-devsbook

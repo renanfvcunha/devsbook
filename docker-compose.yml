@@ -45,4 +45,4 @@ services:
 # - Post Install:
 # - - Instalar os drivers de conexão do mysql executando:
 # docker-compose exec php docker-php-ext-install pdo pdo_mysql
-# docker-compose php restart
+# docker-compose restart php

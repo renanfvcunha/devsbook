@@ -3,12 +3,21 @@ Projeto Devsbook da B7Web modificado por Renan Cunha.
 ## Instalação
 Você pode clonar este repositório OU baixar o .zip
 
+<<<<<<< HEAD
 Ao descompactar, é necessário rodar **composer** e o **npm** para instalar as
 dependências do projeto, então certifique-se de que tem esses gerenciadores
 de pacote instalados.
+=======
+Ao descompactar, é necessário rodar **composer** e o **npm** pra instalar as dependências e gerar o *autoload* do projeto.
+>>>>>>> d743ccf5cca2d89d030b0e03e7c0b339a580c69f
 
 Para isso, vá até a pasta do projeto, pelo *prompt/terminal* e execute:
 > composer install
+> npm install
+
+Para utilizar o **docker-compose** é só rodar o comando:
+> docker-compose up -d
+E então seguir as instruções de Post Install.
 
 > npm install
 
@@ -19,6 +28,7 @@ E então siga as instruções de Post Install do arquivo docker-compose.yml.
 ## Configuração
 Copie o arquivo **.env.example** e cole como **.env** e então insira todas
 as credenciais e configurações necessárias.
+<<<<<<< HEAD
 
 Se estiver utilizando o docker-compose, execute:
 > docker container inspect mysql-devsbook
@@ -33,14 +43,21 @@ para que sejam compilados para a pasta public.
 Caso não queira setar o comando mais de uma vez, basta executar
 > npx webpack --mode=production --watch
 para que o webpack compile automaticamente todas as alterações.
+=======
+Todos os arquivos da aplicação estão dentro da pasta *src*.
+>>>>>>> d743ccf5cca2d89d030b0e03e7c0b339a580c69f
 
 ## Uso
 Para o uso com docker-compose, o nginx já está configurado para
 usar a pasta public como root.
 
 Caso seja configurado manualmente, você deve acessar a pasta *public* do projeto.
+<<<<<<< HEAD
 O ideal é criar um ***alias*** específico no servidor que direcione diretamente
 para a pasta *public*.
+=======
+O ideal é criar um ***alias*** específico no servidor que direcione diretamente para a pasta *public*.
+>>>>>>> d743ccf5cca2d89d030b0e03e7c0b339a580c69f
 
 ## Modelo de MODEL
 ```php

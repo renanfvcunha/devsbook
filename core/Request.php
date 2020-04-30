@@ -8,7 +8,7 @@ class Request
     public static function getUrl()
     {
         $url = filter_input(INPUT_GET, 'request');
-        $url = str_replace(Config::BASE_DIR, '', $url);
+        $url = str_replace(getenv('BASE_DIR'), '', $url);
         return '/' . $url;
     }
 

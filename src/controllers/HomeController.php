@@ -15,7 +15,7 @@ class HomeController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if (!$this->loggedUser) {
-            $this->redirect('/signin');
+            $this->redirect('signin');
         }
     }
 

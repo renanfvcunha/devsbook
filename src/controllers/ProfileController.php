@@ -17,7 +17,7 @@ class ProfileController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if (!$this->loggedUser) {
-            $this->redirect('/signin');
+            $this->redirect('signin');
         }
     }
 
@@ -38,7 +38,7 @@ class ProfileController extends Controller
         // Pegando informações do usuário
         $user = User::getUser($id, true);
         if (!$user) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         // Calculando idade do usuário
@@ -119,7 +119,7 @@ class ProfileController extends Controller
         // Pegando informações do usuário
         $user = User::getUser($id, true);
         if (!$user) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         // Verificar se EU sigo o usuário
@@ -152,7 +152,7 @@ class ProfileController extends Controller
         // Pegando informações do usuário
         $user = User::getUser($id, true);
         if (!$user) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         // Verificar se EU sigo o usuário

@@ -23,7 +23,7 @@ class LoginController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if ($this->loggedUser) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         $this->render('signin');
@@ -68,6 +68,7 @@ class LoginController extends Controller
                 "error" =>
                     "Erro interno do servidor. Tente novamente ou contate o suporte.",
             ]);
+            $this->setErrorLog($th);
             exit();
         }
     }
@@ -81,7 +82,7 @@ class LoginController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if ($this->loggedUser) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         $this->render('signup');
@@ -136,6 +137,7 @@ class LoginController extends Controller
                 "error" =>
                     "Erro interno do servidor. Tente novamente ou contate o suporte.",
             ]);
+            $this->setErrorLog($th);
             exit();
         }
     }
@@ -143,6 +145,6 @@ class LoginController extends Controller
     public function SignOut()
     {
         $_SESSION['token'] = '';
-        $this->redirect('/');
+        $this->redirect('');
     }
 }

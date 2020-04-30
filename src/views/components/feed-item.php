@@ -2,16 +2,16 @@
     <div class="box-body">
         <div class="feed-item-head row mt-20 m-width-20">
             <div class="feed-item-head-photo">
-                <a href="<?= $base ?>/profile/<?= $data->user->id ?>">
+                <a href="<?= $base ?>profile/<?= $data->user->id ?>">
                     <?php if ($data->user->avatar) : ?>
-                    <img src="<?= $base ?>/media/avatars/<?= $data->user->avatar ?>" />
+                    <img src="<?= $base ?>media/avatars/<?= $data->user->avatar ?>" />
                     <?php else : ?>
                     <img src="https://api.adorable.io/avatars/50/<?= $data->user->slug ?>.png" />
                     <?php endif; ?>
                 </a>
             </div>
             <div class="feed-item-head-info">
-                <a href="<?= $base ?>/profile/<?= $data->user->id ?>">
+                <a href="<?= $base ?>profile/<?= $data->user->id ?>">
                     <span class="fidi-name">
                         <?= $data->user->name ?>
                     </span>
@@ -32,7 +32,7 @@
                 </span>
             </div>
             <div class="feed-item-head-btn">
-                <img src="<?= $base ?>/assets/images/more.png" />
+                <img src="<?= $base ?>assets/images/more.png" />
             </div>
         </div>
         <div class="feed-item-body mt-10 m-width-20">
@@ -58,9 +58,9 @@
 
             <div class="fic-answer row m-height-10 m-width-20">
                 <div class="fic-item-photo">
-                    <a href="<?= $base ?>/profile/<?= $loggedUser->id ?>">
+                    <a href="<?= $base ?>profile/<?= $loggedUser->id ?>">
                         <?php if ($loggedUser->avatar) : ?>
-                        <img src="<?= $base ?>/media/avatars/<?= $loggedUser->avatar ?>" />
+                        <img src="<?= $base ?>media/avatars/<?= $loggedUser->avatar ?>" />
                         <?php else : ?>
                         <img src="https://api.adorable.io/avatars/35/<?= $loggedUser->slug ?>.png" />
                         <?php endif; ?>

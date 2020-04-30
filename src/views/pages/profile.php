@@ -12,18 +12,18 @@
                 <div class="box">
                     <div class="box-body">
                         <div class="user-info-mini">
-                            <img src="<?= $base ?>/assets/images/calendar.png" />
+                            <img src="<?= $base ?>assets/images/calendar.png" />
                             <?= date('d/m/Y', strtotime($user->birthdate)) ?> (<?= $user->age ?> anos)
                         </div>
                         <?php if($user->city): ?>
                             <div class="user-info-mini">
-                                <img src="<?= $base ?>/assets/images/pin.png" />
+                                <img src="<?= $base ?>assets/images/pin.png" />
                                 <?= $user->city ?>
                             </div>
                         <?php endif; ?>
                         <?php if($user->work): ?>
                             <div class="user-info-mini">
-                                <img src="<?= $base ?>/assets/images/work.png" />
+                                <img src="<?= $base ?>assets/images/work.png" />
                                 <?= $user->work ?>
                             </div>
                         <?php endif; ?>
@@ -36,14 +36,14 @@
                             <span>(<?= count($user->following) ?>)</span>
                         </div>
                         <div class="box-header-buttons">
-                            <a href="<?= $base ?>/profile/<?= $user->id ?>/friends">Ver Todos</a>
+                            <a href="<?= $base ?>profile/<?= $user->id ?>/friends">Ver Todos</a>
                         </div>
                     </div>
                     <div class="box-body friend-list">
                         <?php for($i=0; $i<9; $i++): ?>
                             <?php if(isset($user->following[$i])): ?>
                             <div class="friend-icon">
-                                <a href="<?= $base ?>/profile/<?= $user->following[$i]->id ?>">
+                                <a href="<?= $base ?>profile/<?= $user->following[$i]->id ?>">
                                     <div class="friend-icon-avatar">
                                         <?php if($user->following[$i]->avatar): ?>
                                         <img src="<?= $base ?>media/avatars/<?= $user->following[$i]->avatar ?>" />
@@ -69,7 +69,7 @@
                             <span>(<?= count($user->photos) ?>)</span>
                         </div>
                         <div class="box-header-buttons">
-                            <a href="<?= $base ?>/profile/<?= $user->id ?>/pictures">Ver Todas</a>
+                            <a href="<?= $base ?>profile/<?= $user->id ?>/pictures">Ver Todas</a>
                         </div>
                     </div>
                     <div class="box-body row m-20">
@@ -77,10 +77,10 @@
                             <?php if (isset($user->photos[$i])): ?>
                             <div class="user-photo-item">
                                 <a href="#modal-<?= $user->photos[$i]->id ?>" rel="modal:open">
-                                    <img src="<?= $base ?>/media/uploads/<?= $user->photos[$i]->body ?>" />
+                                    <img src="<?= $base ?>media/uploads/<?= $user->photos[$i]->body ?>" />
                                 </a>
                                 <div id="modal-<?= $user->photos[$i]->id ?>" style="display:none">
-                                    <img src="<?= $base ?>/media/uploads/<?= $user->photos[$i]->body ?>" />
+                                    <img src="<?= $base ?>media/uploads/<?= $user->photos[$i]->body ?>" />
                                 </div>
                             </div>
                             <?php endif; ?>
@@ -102,7 +102,7 @@
                 <?php for($q=1; $q<$feed['totalPages'] + 1; $q++): ?>
                     <a
                         class="<?= ($q === $page + 1 ? 'active' : '' ) ?>"
-                        href="<?= $base ?>/profile/<?= $user->id ?>?p=<?= $q ?>"
+                        href="<?= $base ?>profile/<?= $user->id ?>?p=<?= $q ?>"
                     >
                         <?= $q ?>
                     </a>

@@ -16,7 +16,7 @@
                 <?php for($q=1; $q<$feed['totalPages'] + 1; $q++): ?>
                     <a
                         class="<?= ($q === $page + 1 ? 'active' : '' ) ?>"
-                        href="<?= $base ?>/?p=<?= $q ?>"
+                        href="<?= $base ?>?p=<?= $q ?>"
                     >
                         <?= $q ?>
                     </a>

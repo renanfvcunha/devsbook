@@ -1,7 +1,8 @@
 <?php
 namespace core;
 
-use src\Config;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 class Controller
 {
@@ -21,9 +22,19 @@ class Controller
         if ($_SERVER['SERVER_PORT'] != '80') {
             $base .= ':' . $_SERVER['SERVER_PORT'];
         }
-        $base .= Config::BASE_DIR;
+        $base .= getenv('BASE_DIR');
 
         return $base;
+    }
+
+    protected function setErrorLog($error)
+    {
+        $log = new Logger('error');
+        $log->pushHandler(
+            new StreamHandler('../logs/error.log', Logger::ERROR),
+        );
+
+        $log->error($error);
     }
 
     private function _render($folder, $viewName, $viewData = [])

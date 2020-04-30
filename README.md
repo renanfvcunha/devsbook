@@ -9,11 +9,6 @@ de pacote instalados.
 
 - Para isso, navegue até a pasta do projeto pelo *prompt/terminal* e execute:
 > composer install
-> npm install
-
-Para utilizar o **docker-compose** é só rodar o comando:
-> docker-compose up -d
-E então seguir as instruções de Post Install.
 
 > npm install
 

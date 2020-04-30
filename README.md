@@ -1,24 +1,28 @@
 ## Instalação
 Você pode clonar este repositório OU baixar o .zip
 
-Ao descompactar, é necessário rodar o **composer** pra instalar as dependências e gerar o *autoload*.
+Ao descompactar, é necessário rodar **composer** e o **npm** pra instalar as dependências e gerar o *autoload* do projeto.
 
 Vá até a pasta do projeto, pelo *prompt/terminal* e execute:
 > composer install
+> npm install
+
+Para utilizar o **docker-compose** é só rodar o comando:
+> docker-compose up -d
+E então seguir as instruções de Post Install.
 
 Depois é só aguardar.
 
 ## Configuração
-Todos os arquivos de **configuração** e aplicação estão dentro da pasta *src*.
-
-As configurações de Banco de Dados e URL estão no arquivo *src/Config.php*
-
-É importante configurar corretamente a constante *BASE_DIR*:
-> const BASE_DIR = '/**PastaDoProjeto**/public';
+Copie o arquivo **.env.example** e cole como **.env** e então insira todas
+as credenciais e configurações necessárias.
+Todos os arquivos da aplicação estão dentro da pasta *src*.
 
 ## Uso
-Você deve acessar a pasta *public* do projeto.
+Para o uso com docker-compose, o nginx já está configurado para
+usar a pasta public como root.
 
+Caso seja configurado manualmente, você deve acessar a pasta *public* do projeto.
 O ideal é criar um ***alias*** específico no servidor que direcione diretamente para a pasta *public*.
 
 ## Modelo de MODEL

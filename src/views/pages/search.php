@@ -10,10 +10,10 @@
                         <div class="full-friend-list">
                             <?php foreach($users as $user): ?>
                             <div class="friend-icon">
-                                <a href="<?= $base ?>/profile/<?= $user->id ?>">
+                                <a href="<?= $base ?>profile/<?= $user->id ?>">
                                     <div class="friend-icon-avatar">
                                         <?php if ($user->avatar): ?>
-                                        <img src="<?= $base ?>/media/avatars/<?= $user->avatar ?>" />
+                                        <img src="<?= $base ?>media/avatars/<?= $user->avatar ?>" />
                                         <?php else: ?>
                                         <img src="https://api.adorable.io/avatars/55/<?= $user->slug ?>.png" />
                                         <?php endif; ?>

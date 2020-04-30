@@ -4,10 +4,10 @@ namespace src;
 
 class Config
 {
-    const BASE_DIR = '/devsbook/public';
+    const BASE_DIR = '/';
 
     const DB_DRIVER = 'mysql';
-    const DB_HOST = '172.17.0.3';
+    const DB_HOST = '172.20.0.2';
     const DB_PORT = 3306;
     const DB_NAME = 'devsbook';
     const DB_USER = 'root';

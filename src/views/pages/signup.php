@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <title>Login - Devsbook</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-    <link rel="stylesheet" href="<?= $base ?>/assets/css/login.css" />
+    <link rel="stylesheet" href="<?= $base ?>assets/css/login.css" />
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a href=""><img src="<?= $base ?>/assets/images/devsbook_logo.png" /></a>
+            <a href=""><img src="<?= $base ?>assets/images/devsbook_logo.png" /></a>
         </div>
     </header>
     <section class="container main">
@@ -53,10 +53,10 @@
 
             <button class="button" type="submit">Cadastrar</button>
 
-            <a href="<?= $base ?>/signin">Já tem conta? Entrar</a>
+            <a href="<?= $base ?>signin">Já tem conta? Entrar</a>
         </form>
     </section>
-    <script type="text/javascript" src="<?= $base ?>/assets/js/signup.js"></script>
+    <script type="text/javascript" src="<?= $base ?>assets/js/signup.js"></script>
 </body>
 
 </html>

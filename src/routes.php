@@ -1,6 +1,10 @@
 <?php
 
 use core\Router;
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable('../');
+$dotenv->load();
 
 $router = new Router();
 

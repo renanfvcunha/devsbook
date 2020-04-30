@@ -1,25 +1,50 @@
+Projeto Devsbook da B7Web modificado por Renan Cunha.
+
 ## Instalação
-Você pode clonar este repositório OU baixar o .zip
+- Você pode clonar este repositório OU baixar o .zip
 
-Ao descompactar, é necessário rodar o **composer** pra instalar as dependências e gerar o *autoload*.
+- Ao descompactar, é necessário rodar **composer** e o **npm** para instalar as
+dependências do projeto, então certifique-se de que tem esses gerenciadores
+de pacote instalados.
 
-Vá até a pasta do projeto, pelo *prompt/terminal* e execute:
+- Para isso, navegue até a pasta do projeto pelo *prompt/terminal* e execute:
 > composer install
 
-Depois é só aguardar.
+> npm install
+
+- Para utilizar o **docker-compose**, execute:
+> docker-compose up -d
+- E então siga as instruções de Post Install do arquivo docker-compose.yml.
 
 ## Configuração
-Todos os arquivos de **configuração** e aplicação estão dentro da pasta *src*.
+- Copie o arquivo **.env.example** e cole como **.env** e então insira todas
+as credenciais e configurações necessárias.
 
-As configurações de Banco de Dados e URL estão no arquivo *src/Config.php*
+- Dê permissão de escrita para o arquivos dentro da pasta **logs** (caso não
+exista, crie-a) para que os logs possam ser registrados.
+> chmod -R 777 logs/*
 
-É importante configurar corretamente a constante *BASE_DIR*:
-> const BASE_DIR = '/**PastaDoProjeto**/public';
+- Se estiver utilizando o docker-compose, execute:
+> docker container inspect mysql-devsbook
+e então procure o endereço ip do mysql para setar no DB_HOST do arquivo **.env**
+
+- Todos os arquivos da aplicação estão dentro da pasta *src*.
+
+- As alterações nos arquivos javascript devem ser feitas na pasta
+*js* dentro de *src* e, em seguida, executar o comando
+> npx webpack --mode=production
+para que sejam compilados para a pasta public.
+- Caso não queira setar o comando mais de uma vez, basta executar
+> npx webpack --mode=production --watch
+para que o webpack compile automaticamente todas as alterações.
 
 ## Uso
-Você deve acessar a pasta *public* do projeto.
+- Para o uso com docker-compose, o nginx já está configurado para
+usar a pasta public como root.
 
-O ideal é criar um ***alias*** específico no servidor que direcione diretamente para a pasta *public*.
+- Caso seja configurado manualmente, você deve acessar a pasta *public* do projeto.
+O ideal é criar um ***alias*** específico no servidor que direcione diretamente
+para a pasta *public*.
 
 ## Modelo de MODEL
 ```php

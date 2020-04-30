@@ -12,9 +12,9 @@
             </div>
             <div class="profile-info m-20 row">
                 <div class="profile-info-avatar">
-                    <a href="<?= $base ?>/profile/<?= $user->id ?>">
+                    <a href="<?= $base ?>profile/<?= $user->id ?>">
                         <?php if ($user->avatar): ?>
-                        <img src="<?= $base ?>/media/avatars/<?= $user->avatar ?>" />
+                        <img src="<?= $base ?>media/avatars/<?= $user->avatar ?>" />
                         <?php else: ?>
                         <img src="https://api.adorable.io/avatars/50/<?= $user->slug ?>.png" />
                         <?php endif; ?>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="profile-info-name">
                     <div class="profile-info-name-text">
-                        <a href="<?= $base ?>/profile/<?= $user->id ?>"><?= $user->name ?></a>
+                        <a href="<?= $base ?>profile/<?= $user->id ?>"><?= $user->name ?></a>
                     </div>
                     <?php if($user->city): ?>
                     <div class="profile-info-location"><?= $user->city ?></div>
@@ -30,19 +30,19 @@
                 </div>
                 <div class="profile-info-data row">
                     <div class="profile-info-item m-width-20">
-                        <a href="<?= $base ?>/profile/<?= $user->id?>/friends">
+                        <a href="<?= $base ?>profile/<?= $user->id?>/friends">
                             <div id="followers" class="profile-info-item-n"><?= count($user->followers) ?></div>
                             <div class="profile-info-item-s">Seguidores</div>
                         </a>
                     </div>
                     <div class="profile-info-item m-width-20">
-                        <a href="<?= $base ?>/profile/<?= $user->id?>/friends">
+                        <a href="<?= $base ?>profile/<?= $user->id?>/friends">
                             <div class="profile-info-item-n"><?= count($user->following) ?></div>
                             <div class="profile-info-item-s">Seguindo</div>
                         </a>
                     </div>
                     <div class="profile-info-item m-width-20">
-                        <a href="<?= $base ?>/profile/<?= $user->id?>/pictures">
+                        <a href="<?= $base ?>profile/<?= $user->id?>/pictures">
                             <div class="profile-info-item-n"><?= count($user->photos) ?></div>
                             <div class="profile-info-item-s">Fotos</div>
                         </a>

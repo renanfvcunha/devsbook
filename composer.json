@@ -1,6 +1,8 @@
 {
     "require": {
-        "clancats/hydrahon": "^1.1"
+        "clancats/hydrahon": "^1.1",
+        "monolog/monolog": "^2.0",
+        "vlucas/phpdotenv": "^4.1"
     },
     "autoload": {
         "psr-4": {

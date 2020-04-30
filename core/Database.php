@@ -2,8 +2,6 @@
 
 namespace core;
 
-use src\Config;
-
 class Database
 {
     private static $_pdo;
@@ -12,21 +10,21 @@ class Database
         if (!isset(self::$_pdo)) {
             //MySQL
             self::$_pdo = new \PDO(
-                Config::DB_DRIVER .
+                getenv('DB_DRIVER') .
                     ":dbname=" .
-                    Config::DB_NAME .
+                    getenv('DB_NAME') .
                     ";host=" .
-                    Config::DB_HOST .
+                    getenv('DB_HOST') .
                     ";charset=utf8",
-                Config::DB_USER,
-                Config::DB_PASS,
+                getenv('DB_USER'),
+                getenv('DB_PASS'),
             );
 
             //Postgres
             /* self::$_pdo = new \PDO(
-                Config::DB_DRIVER . ":host=" . Config::DB_HOST . ";port=" . Config::DB_PORT
-                    . ";dbname=" . Config::DB_NAME . ";user=" . Config::DB_USER . ";password="
-                    . Config::DB_PASS
+                getenv('DB_DRIVER') . ":host=" . getenv('DB_HOST') . ";port=" . getenv('DB_PORT')
+                    . ";dbname=" . getenv('DB_NAME') . ";user=" . getenv('DB_USER') . ";password="
+                    . getenv('DB_PASS')
             ); */
         }
         return self::$_pdo;

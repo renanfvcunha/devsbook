@@ -24,10 +24,10 @@
                                 <div class="full-friend-list">
                                     <?php foreach($user->followers as $follower): ?>
                                     <div class="friend-icon">
-                                        <a href="<?= $base ?>/profile/<?= $follower->id ?>">
+                                        <a href="<?= $base ?>profile/<?= $follower->id ?>">
                                             <div class="friend-icon-avatar">
                                                 <?php if ($follower->avatar): ?>
-                                                <img src="<?= $base ?>/media/avatars/<?= $follower->avatar ?>" />
+                                                <img src="<?= $base ?>media/avatars/<?= $follower->avatar ?>" />
                                                 <?php else: ?>
                                                 <img src="https://api.adorable.io/avatars/55/<?= $follower->slug ?>.png" />
                                                 <?php endif; ?>
@@ -44,10 +44,10 @@
                                 <div class="full-friend-list">
                                     <?php foreach($user->following as $following): ?>
                                     <div class="friend-icon">
-                                        <a href="<?= $base ?>/profile/<?= $following->id ?>">
+                                        <a href="<?= $base ?>profile/<?= $following->id ?>">
                                             <div class="friend-icon-avatar">
                                                 <?php if ($following->avatar): ?>
-                                                <img src="<?= $base ?>/media/avatars/<?= $following->avatar ?>" />
+                                                <img src="<?= $base ?>media/avatars/<?= $following->avatar ?>" />
                                                 <?php else: ?>
                                                 <img src="https://api.adorable.io/avatars/55/<?= $following->slug ?>.png" />
                                                 <?php endif; ?>

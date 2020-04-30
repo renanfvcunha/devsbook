@@ -1,5 +1,9 @@
-composer.lock
 vendor
 node_modules
+mysql/*
+logs/*
+composer.lock
 package-lock.json
+yarn.lock
+.env
 .DS_Store

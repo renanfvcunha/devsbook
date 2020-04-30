@@ -14,7 +14,7 @@ class SearchController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if (!$this->loggedUser) {
-            $this->redirect('/signin');
+            $this->redirect('signin');
         }
     }
 
@@ -23,7 +23,7 @@ class SearchController extends Controller
         $search = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_SPECIAL_CHARS);
 
         if (empty($search)) {
-            $this->redirect('/');
+            $this->redirect('');
         }
 
         $users = User::searchUser($search);

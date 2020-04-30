@@ -15,7 +15,7 @@ class PostController extends Controller
         $this->loggedUser = LoginHandler::checkLoggedUser();
 
         if (!$this->loggedUser) {
-            $this->redirect('/signin');
+            $this->redirect('signin');
         }
     }
 
@@ -35,6 +35,6 @@ class PostController extends Controller
             }
         }
 
-        $this->redirect('/');
+        $this->redirect('');
     }
 }

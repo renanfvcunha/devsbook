@@ -18,10 +18,10 @@
                             <?php foreach($user->photos as $photo): ?>
                             <div class="user-photo-item">
                                 <a href="#modal-<?= $photo->id ?>" rel="modal:open">
-                                    <img src="<?= $base ?>/media/uploads/<?= $photo->body ?>" />
+                                    <img src="<?= $base ?>media/uploads/<?= $photo->body ?>" />
                                 </a>
                                 <div id="modal-<?= $photo->id ?>" style="display:none">
-                                    <img src="<?= $base ?>/media/uploads/<?= $photo->body ?>" />
+                                    <img src="<?= $base ?>media/uploads/<?= $photo->body ?>" />
                                 </div>
                             </div>
                             <?php endforeach; ?>
